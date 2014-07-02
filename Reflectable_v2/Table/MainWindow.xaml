@@ -1,0 +1,14 @@
+﻿<s:SurfaceWindow x:Class="Table.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:t="clr-namespace:Table"
+    Title="Table">
+    <Grid>
+        <t:Stage1ScreenSaver x:Name="Screensaver"
+                             Visibility="Visible" />
+        
+        <t:Stage2TabletopUI x:Name="Tabletop"
+                            Visibility="Hidden" />
+    </Grid>
+</s:SurfaceWindow>

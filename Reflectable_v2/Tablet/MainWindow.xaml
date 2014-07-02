@@ -1,0 +1,26 @@
+﻿<s:SurfaceWindow x:Class="Tablet.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:t="clr-namespace:Tablet"
+    Title="Reflectable Tablet"
+    Width="1280"
+    Height="800"
+                 WindowState="Normal">
+    <Grid>
+        <t:Register x:Name="RegisterControl"
+                    RegisterClicked="Register_RegisterClicked" 
+                    Visibility="Visible" />
+
+        <t:Stage1UI x:Name="Stage1Control"
+                    RoundComplete="StageControl_RoundComplete"
+                    ButtonPressed="Stage1Control_ButtonPressed"
+                    StartRequested="StageControl_StartRequested"
+                    Visibility="Hidden"/>
+
+        <t:Stage2UI x:Name="Stage2Control"
+                    StartRequested="StageControl_StartRequested"
+                    RoundComplete="StageControl_RoundComplete"
+                    Visibility="Hidden" />
+    </Grid>
+</s:SurfaceWindow>

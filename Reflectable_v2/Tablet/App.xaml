@@ -1,0 +1,116 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:properties="clr-namespace:Tablet.Properties"
+    xmlns:Custom="http://schemas.microsoft.com/surface/2008" x:Class="Tablet.App"
+    StartupUri="MainWindow.xaml"
+    DispatcherUnhandledException="Application_DispatcherUnhandledException"
+    >
+    <Application.Resources>
+      <ResourceDictionary>
+            <properties:Settings x:Key="Settings" />
+      	<Style TargetType="{x:Type Control}" x:Key="ControlBaseStyle">
+      		<Setter Property="FocusVisualStyle"	
+      			Value="{x:Null}"/>
+      		<Setter Property="SnapsToDevicePixels"
+      			Value="False"/>
+      		<Setter Property="FontFamily"
+      			Value="Segoe360"/>
+      		<Setter Property="FontWeight"
+      			Value="Normal"/>
+      		<Setter Property="FontSize"
+      			Value="17"/>
+      		<Setter Property="Padding"
+      			Value="6,2,10,10"/>
+      		<Setter Property="MinHeight"
+      			Value="38"/>
+      		<Setter Property="MinWidth"
+      			Value="38"/>
+      		<Setter Property="Margin"
+      			Value="1"/>
+      		<Setter Property="HorizontalContentAlignment"
+      			Value="Left"/>
+      		<Setter Property="VerticalContentAlignment"
+      			Value="Top"/>
+      		<Setter Property="BorderThickness"
+      			Value="2"/>
+      	</Style>
+      	<Style x:Key="ReflectableSurfaceButtonStyle"
+      		TargetType="{x:Type Custom:SurfaceButton}" 
+      		BasedOn="{StaticResource ControlBaseStyle}">
+      		<Setter Property="IsTabStop"
+      			Value="False" />
+      		<Setter Property="Focusable"
+      			Value="True" />
+      		<Setter Property="Background" >
+      			<Setter.Value>
+      				<SolidColorBrush Color="#FF878787"/>
+      			</Setter.Value>
+      		</Setter>
+      		<Setter Property="Foreground"
+      			Value="White" />
+      		<Setter Property="Margin" Value="0"/>
+      		<Setter Property="FontFamily" Value="Aovel Sans"/>
+      		<Setter Property="FontWeight" Value="Normal"/>
+      		<Setter Property="FontStyle" Value="Normal"/>
+      		<Setter Property="VerticalAlignment" Value="Center"/>
+      		<Setter Property="VerticalContentAlignment" Value="Center"/>
+      		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+      		<Setter Property="Padding" Value="16,8"/>
+      		<Setter Property="FontSize" Value="21.333"/>
+      		<Setter Property="BorderBrush" Value="#FF878787"/>
+      		<Setter Property="Width" Value="Auto"/>
+      		<Setter Property="Height" Value="Auto"/>
+      	</Style>
+      	<Style x:Key="ReflectableLogo" TargetType="{x:Type Label}">
+      		<Setter Property="Foreground" Value="#FF073D78"/>
+      		<Setter Property="Background" Value="Transparent"/>
+      		<Setter Property="Padding" Value="5"/>
+      		<Setter Property="HorizontalContentAlignment" Value="Left"/>
+      		<Setter Property="VerticalContentAlignment" Value="Top"/>
+      		<Setter Property="Template">
+      			<Setter.Value>
+      				<ControlTemplate TargetType="{x:Type Label}">
+      					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+      						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+      					</Border>
+      					<ControlTemplate.Triggers>
+      						<Trigger Property="IsEnabled" Value="false">
+      							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+      						</Trigger>
+      					</ControlTemplate.Triggers>
+      				</ControlTemplate>
+      			</Setter.Value>
+      		</Setter>
+      		<Setter Property="FontFamily" Value="Aovel Sans"/>
+      		<Setter Property="FontSize" Value="64"/>
+      		<Setter Property="FontWeight" Value="Bold"/>
+      	</Style>
+      	<Style x:Key="MediumTitle" TargetType="{x:Type Label}">
+      		<Setter Property="Foreground" Value="Black"/>
+      		<Setter Property="Background" Value="{x:Null}"/>
+      		<Setter Property="Padding" Value="5"/>
+      		<Setter Property="HorizontalContentAlignment" Value="Left"/>
+      		<Setter Property="VerticalContentAlignment" Value="Top"/>
+      		<Setter Property="Template">
+      			<Setter.Value>
+      				<ControlTemplate TargetType="{x:Type Label}">
+      					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+      						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+      					</Border>
+      					<ControlTemplate.Triggers>
+      						<Trigger Property="IsEnabled" Value="false">
+      							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+      						</Trigger>
+      					</ControlTemplate.Triggers>
+      				</ControlTemplate>
+      			</Setter.Value>
+      		</Setter>
+      		<Setter Property="FontFamily" Value="Aovel Sans"/>
+      		<Setter Property="FontWeight" Value="Normal"/>
+      		<Setter Property="FontSize" Value="24"/>
+      		<Setter Property="Margin" Value="0"/>
+      	</Style>
+        </ResourceDictionary>
+</Application.Resources>
+</Application>

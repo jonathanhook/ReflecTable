@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Tablet.PanopticonPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:t="clr-namespace:Tablet"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="640">
+    <Grid>
+        <MediaElement Name="VideoPlayer"
+                      MediaEnded="VideoPlayer_MediaEnded"
+                      MediaOpened="VideoPlayer_MediaOpened"
+                      LoadedBehavior="Play"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch" />
+        <Canvas Name="OverlayCanvas" 
+                Background="Transparent" 
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
+        <t:PopupPlayer x:Name="PopupPlayer" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Closed="PopupPlayer_Closed" />
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Tablet.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerAddress" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">net.tcp://localhost:8010</Value>
+    </Setting>
+    <Setting Name="UserId" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Panopticon_Processing_Label" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Video data processing ({0}%)</Value>
+    </Setting>
+    <Setting Name="Panopticon_Downloading_Label" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Video downloading ({0}%)</Value>
+    </Setting>
+    <Setting Name="FileServerAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">net.tcp://localhost:8020</Value>
+    </Setting>
+    <Setting Name="Register_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Click here to get started</Value>
+    </Setting>
+    <Setting Name="MarkButtonLabel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Something interesting happened</Value>
+    </Setting>
+    <Setting Name="RoundTimeStartLabel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Start round</Value>
+    </Setting>
+    <Setting Name="RoundTimerNextLabel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Next round</Value>
+    </Setting>
+    <Setting Name="Comment" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Comment</Value>
+    </Setting>
+    <Setting Name="Cancel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Cancel</Value>
+    </Setting>
+    <Setting Name="Finish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Finish game</Value>
+    </Setting>
+    <Setting Name="ResearchQuestionLabel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Please enter your group's research question on one of the tablets</Value>
+    </Setting>
+    <Setting Name="ResearchQuestionSubmitLabel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Submit</Value>
+    </Setting>
+    <Setting Name="AreYouSure" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Are you sure your would like to go on to the next round?</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

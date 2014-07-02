@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Tablet.PopupPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             xmlns:p="clr-namespace:Tablet.Properties"
+             mc:Ignorable="d">
+	<Grid Background="#E9E9E9E9" Name="MainGrid" Focusable="True" MouseDown="MainGrid_MouseDown" TouchDown="MainGrid_TouchDown">
+        <Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		
+		<MediaElement Name="VideoPlayer" Grid.Row="0" MediaEnded="VideoPlayer_MediaEnded" LoadedBehavior="Play" Margin="20,20,20,0" Width="400" Height="300" />
+        <s:SurfaceTextBox MaxWidth="400" Grid.Row="1" Name="CommentBlock" Background="White" FontSize="15" Padding="8" BorderBrush="Transparent" TextWrapping="Wrap" Foreground="Black" Height="100" Margin="20, 20" BorderThickness="0" MaxLength="150" Visibility="Collapsed">
+            <s:SurfaceTextBox.Triggers>
+                <EventTrigger RoutedEvent="GotFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ThicknessAnimation Storyboard.TargetName="MainGrid" Storyboard.TargetProperty="Margin" To="0, 0, 0, 200" Duration="0:0:0.5" BeginTime="0:0:0" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="LostFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ThicknessAnimation Storyboard.TargetName="MainGrid" Storyboard.TargetProperty="Margin" To="0, 0, 0, 0" Duration="0:0:0.5" BeginTime="0:0:0" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </s:SurfaceTextBox.Triggers>
+        </s:SurfaceTextBox>
+        <Grid Grid.Row="2" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <s:SurfaceButton Grid.Column="0" Name="OKButton" Click="OKButton_Click" Content="{Binding Source={x:Static p:Settings.Default}, Path=Comment}" Style="{DynamicResource ReflectableSurfaceButtonStyle}" Margin="20" Visibility="Collapsed" />
+            <s:SurfaceButton Grid.Column="1" Name="CloseButton" Click="CloseButton_Click" Content="{Binding Source={x:Static p:Settings.Default}, Path=Cancel}" Style="{DynamicResource ReflectableSurfaceButtonStyle}" Margin="0,20,20,20"  />
+        </Grid>
+    </Grid>
+</UserControl>

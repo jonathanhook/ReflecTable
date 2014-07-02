@@ -1,0 +1,13 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="Tablet.CountdownTimer" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Label x:Name="TimerLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="#FF073D78" FontFamily="Aovel Sans" />
+		<ed:Arc Name="Pie" ArcThickness="20" ArcThicknessUnit="Pixel" StartAngle="360" EndAngle="0" Height="125" Stretch="None" Width="125" Fill="#FF073D78" />
+    </Grid>
+</UserControl>

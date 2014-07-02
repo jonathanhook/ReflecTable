@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Tablet.Stage1UI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             xmlns:p="clr-namespace:Tablet.Properties"
+             xmlns:t="clr-namespace:Tablet"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1024" Background="White">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid Name="ButtonContainer">
+                    <s:SurfaceButton Name="MainButton"
+                                     Click="MainButton_Click"
+                                     Content="{Binding Source={x:Static p:Settings.Default}, Path=MarkButtonLabel}"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center" MinWidth="400" MinHeight="300" Style="{DynamicResource ReflectableSurfaceButtonStyle}" Background="{x:Null}" />
+                    <Border Name="ButtonCover" Background="#E9E9E9" Opacity="0.75" MinWidth="400" MinHeight="300" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <t:RoundTimer x:Name="Timer"
+                              SkipToNext="Timer_SkipToNext"
+                              RoundComplete="Timer_RoundComplete"
+                              StartRequested="Timer_StartRequested" />
+            </Grid>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch">
+            <t:ConfirmPopup x:Name="ConfirmPopupWindow" Visibility="Collapsed" Confirmed="ConfirmPopupWindow_Confirmed" />
+            <t:InstructionsPopup x:Name="InstructionsPopupWindow" />
+        </Grid>
+    </Grid>
+</UserControl>

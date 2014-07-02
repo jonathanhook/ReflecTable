@@ -1,0 +1,72 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Table.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="VideoDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">USB2.0 PC CAMERA</Value>
+    </Setting>
+    <Setting Name="AudioDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">USB2.0 MIC</Value>
+    </Setting>
+    <Setting Name="PressClipLength" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:15</Value>
+    </Setting>
+    <Setting Name="ResearchQuestion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Research question</Value>
+    </Setting>
+    <Setting Name="Round_1_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions Round one instructions </Value>
+    </Setting>
+    <Setting Name="Round_2_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Round two instructions</Value>
+    </Setting>
+    <Setting Name="Round_3_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Round three instructions</Value>
+    </Setting>
+    <Setting Name="Round_4_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Round four instructions</Value>
+    </Setting>
+    <Setting Name="Round_5_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Round five instructions</Value>
+    </Setting>
+    <Setting Name="Round_6_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Round six instructions</Value>
+    </Setting>
+    <Setting Name="Round_2_Time" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:10</Value>
+    </Setting>
+    <Setting Name="Round_3_Time" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:10</Value>
+    </Setting>
+    <Setting Name="Round_4_Time" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:10</Value>
+    </Setting>
+    <Setting Name="Round_5_Time" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:10</Value>
+    </Setting>
+    <Setting Name="Round_6_Time" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:10</Value>
+    </Setting>
+    <Setting Name="Video_Processing_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Video processing instructions</Value>
+    </Setting>
+    <Setting Name="Complete_Instructions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Complete instructions</Value>
+    </Setting>
+    <Setting Name="User0Colour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">238, 127, 0</Value>
+    </Setting>
+    <Setting Name="User1Colour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">64, 189, 185</Value>
+    </Setting>
+    <Setting Name="User2Colour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">122, 181, 29</Value>
+    </Setting>
+    <Setting Name="User3Colour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">226, 0, 122</Value>
+    </Setting>
+    <Setting Name="Round_1_Time" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:10</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

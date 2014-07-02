@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Table.QuestionPostIt"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:p="clr-namespace:Table.Properties"
+             mc:Ignorable="d" 
+             MaxWidth="300"
+             MinWidth="150"
+             MinHeight="15">
+    <Grid Name="BackgroundBorder" Background="#878787">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Content="{Binding Source={x:Static p:Settings.Default}, Path=ResearchQuestion}" FontSize="16" Foreground="Black" FontFamily="Aovel Sans" MinHeight="25" />
+        <TextBlock Grid.Row="2" Name="TextLabel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Aovel Sans" Foreground="White" FontWeight="Bold" FontSize="24" Padding="5" TextWrapping="Wrap" />
+    </Grid>
+</UserControl>

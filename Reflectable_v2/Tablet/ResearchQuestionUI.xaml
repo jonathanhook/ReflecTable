@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Tablet.ResearchQuestionUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:t="clr-namespace:Tablet"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             xmlns:p="clr-namespace:Tablet.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="1000">
+    <Grid Background="#E9E9E9">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="125" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Content="{Binding Source={x:Static p:Settings.Default}, Path=ResearchQuestionLabel}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="20, 0, 20, 0" FontFamily="Aovel Sans" FontSize="22" />
+        <s:SurfaceTextBox Name="QuestionBox" Grid.Row="1" Margin="20" MaxWidth="500" FontSize="16" MaxLength="75" Background="White" Foreground="Black" FontWeight="Normal" TextWrapping="Wrap" />
+        <s:SurfaceButton Name="Submit"  Grid.Row="2" Content="{Binding Source={x:Static p:Settings.Default}, Path=ResearchQuestionSubmitLabel}" Click="Submit_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{DynamicResource ReflectableSurfaceButtonStyle}" Margin="32,0" Grid.RowSpan="2" />
+        <t:ucSpinnerCogs Grid.Row="2" x:Name="Spinner" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0" Grid.RowSpan="2" />
+    </Grid>
+</UserControl>
